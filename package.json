@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "serve": "lerna run serve",
+    "build": "lerna run build",
+    "test:unit": "lerna run test:unit",
+    "lint": "lerna run lint",
+    "single:build": "npx lerna run build --parallel && mkdir -p dist && cp packages/*/dist/*.* dist",
+    "single:start": "ws -d build --spa index.html --port 8080 -z"
+  },
+  "devDependencies": {
+    "lerna": "^5.1.8"
+  }
+}
