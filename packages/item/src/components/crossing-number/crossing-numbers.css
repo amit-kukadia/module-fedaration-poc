@@ -1,0 +1,46 @@
+/******************** Crossing Numbers **********************/
+
+.item-view .crossing-numbers-text .one-info .info-values {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-view .crossing-numbers-text .w-10 {
+    width: 10%;
+}
+
+.item-view .crossing-numbers-text .w-20 {
+    width: 20%;
+}
+
+.item-view .crossing-numbers-text .w-35 {
+    width: 35%;
+}
+
+.item-view .crossing-numbers-text .one-value p {
+    max-width: 90%;
+}
+
+.item-view .crossing-numbers-text .one-value i {
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.item-view .crossing-numbers-text .one-info .info-values .one-value {
+    font-weight: normal;
+}
+
+.item-view .crossing-numbers-text .one-info .info-values .one-value:last-child {
+    text-align: right;
+}
+
+.item-view #crossing-numbers .accordion-body {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.item-view .accordion-body.full-height {
+    transition: max-height 1s ease-in-out;
+    max-height: 10000px !important;
+}

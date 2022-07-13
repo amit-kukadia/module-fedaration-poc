@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const ModuleFederationPlugin = require("webpack").container.ModuleFederationPlugin;
 const isProd = process.env.NODE_ENV === "production";
 
@@ -33,12 +34,26 @@ module.exports = defineConfig({
         // remoteType : 'var',
         remotes: {
           item: "item",
+          reactApp: "reactApp"
         },
         shared: {
           vue: {   
             requiredVersion:'^3.0.0'}
         }
       }),
+      new FileManagerPlugin({
+        events: {
+          // onStart:{
+          //   delete: ['../../dist/'],
+          //   mkdir: ['../../dist/'],  
+          // },
+          onEnd: {
+            copy: [
+              { source: './dist', destination: '../../dist' },
+            ],
+          }
+        }
+      })
     ],
   },
 });

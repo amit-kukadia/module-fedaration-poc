@@ -1,0 +1,122 @@
+
+.item-view .top-box {
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    position: relative;
+}
+
+.item-view .top-box .box-title {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.item-view .top-box .box-title .item-icon {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.item-view .top-box .box-button {
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 10px 25px;
+}
+
+.item-view .top-box .actions {
+    display: flex;
+}
+
+.item-view .top-box .counter {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+}
+
+.item-view .top-box .small-btns {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    display: flex;
+}
+
+.item-view .top-box .small-btns .box-button {
+    padding: 5px 10px;
+    font-size: 10px;
+    width: 50px;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.item-view .top-box .small-btns .plus {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.item-view .top-box .small-btns .plus .box-button {
+    width: 35px;
+    margin: 0;
+}
+
+.item-view .top-box .small-btns .plus .plus-options {
+    position: absolute;
+    left: 0;
+    width: auto;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 35px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+.item-view .top-box .small-btns .show-options .plus-options {
+    opacity: 1;
+    display: flex;
+}
+
+.item-view .top-box .small-btns .plus .plus-options button {
+    border: none;
+    font-size: 10px;
+    background: transparent;
+    color: #000;
+    padding: 0 10px;
+}
+
+.item-view .top-box .small-btns .plus .plus-options button:nth-child(even) {
+    background: var(--main-color);
+    color: #fff;
+}
+
+@media (max-width: 1600px) {
+    .item-view .top-box .box-title {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .item-view .top-box .box-title {
+        font-size: 16px;
+    }
+
+    .item-view .top-box .box-button {
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 991px) {
+    .item-view .top-box .box-title {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

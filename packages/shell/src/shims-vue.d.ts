@@ -4,5 +4,5 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
-declare module 'item/HelloWorld'
+declare module 'item/Item'
 declare module 'bootstrap'

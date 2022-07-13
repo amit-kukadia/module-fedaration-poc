@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const ModuleFederationPlugin = require("webpack").container.ModuleFederationPlugin;
 const isProd = process.env.NODE_ENV === "production";
 
@@ -6,6 +7,7 @@ module.exports = defineConfig({
   devServer :{
     port : 8080
   },
+  lintOnSave : false,
   publicPath :"auto" ,
   transpileDependencies: true,
   chainWebpack: config => {
@@ -24,7 +26,7 @@ module.exports = defineConfig({
         library: { type: "var", name: "item" },
         // remoteType: 'var',
         exposes: {
-          "./HelloWorld": "./src/components/HelloWorld",
+          "./Item": "./src/components/Item",
         },
         shared: {
           vue: {         
@@ -32,6 +34,15 @@ module.exports = defineConfig({
           }
         }
       }),
+      new FileManagerPlugin({
+        events: {
+          onEnd: {
+            copy: [
+              { source: './dist', destination: '../../dist' },
+            ],
+          }
+        }
+      })
     ]
   }
 });

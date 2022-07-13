@@ -1,0 +1,36 @@
+.highlightRow {
+    background-color: var(--offWhite-color);
+}
+
+/******************** Edit Item Attributes *******************/
+.edit-mode .item-attr-text .one-info .info-value .remove-btn {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    margin-left: 0 !important;
+    width: 11%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.edit-mode .item-attr-text .one-info .info-value .full-select {
+    border: 1px solid #dcdddd;
+    padding: 5px;
+    color: #000;
+    width: 87%;
+    border-radius: 0;
+}
+
+.edit-mode .item-attr-text .one-info .info-value .full-input {
+    border: 1px solid #dcdddd;
+    padding: 4px 5px;
+    color: #000;
+    width: 100%;
+    /*width: 87%;*/
+    border-radius: 0;
+}
+
+.attributes-padding {
+    padding-right: 7px;
+}
+

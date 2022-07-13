@@ -1,0 +1,33 @@
+/******************** Sales Price **********************/
+.item-view .sales-price-text .show-history {
+    cursor: pointer;
+}
+
+.item-view .sales-price-text .one-info .info-values {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-view .sales-price-text .one-info .info-values .one-value {
+    width: 20%;
+    font-weight: normal;
+}
+
+.item-view .sales-price-text .one-info .info-values .one-value:last-child {
+    text-align: right;
+}
+
+.item-view .one-info .info-values select {
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    min-width: 90px;
+    border-radius: 8px;
+    color: var(--main-color);
+}
+
+.item-view .one-info .info-values select:disabled {
+    background: #e7e7e7;
+    border: none;
+    color: #000;
+}

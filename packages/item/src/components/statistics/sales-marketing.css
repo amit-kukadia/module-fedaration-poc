@@ -1,0 +1,11 @@
+/******************** Sales Stats ********************/
+.item-view .sales-stats-text .one-info .info-title {
+    width: 30%;
+}
+
+.item-view .sales-stats-text .one-info .info-values {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+

@@ -1,0 +1,46 @@
+.action-notification {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    padding: 25px 50px;
+    border-radius: 5px;
+    animation-name: bounceDown;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    top: -100%;
+    animation-direction: alternate;
+}
+
+.action-notification p {
+    margin-bottom: 0;
+}
+
+.action-notification.failed-notification {
+    background: #fbe3e1;
+    color: #ff090e;
+    border: 1px solid #ff090e;
+}
+
+.action-notification.success-notification {
+    background: #e4faee;
+    color: #00923c;
+    border: 1px solid #00923c;
+}
+
+@keyframes bounceDown {
+    0% {
+        top: -100%;
+    }
+    20% {
+        top: 17%;
+    }
+    30% {
+        top: 15%;
+    }
+    30%,
+    100% {
+        top: 15%;
+    }
+}
