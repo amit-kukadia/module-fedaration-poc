@@ -4,11 +4,11 @@
   "scripts": {
     "serve": "lerna run serve",
     "build": "npx lerna run build",
+    "start": "live-server dist",
     "test:unit": "lerna run test:unit",
     "lint": "lerna run lint",
     "single:build": "npx lerna run build --parallel && mkdir -p dist && cp packages/*/dist/*.* dist",
-    "single:start": "ws -d build --spa index.html --port 8080 -z",
-    "start": "live-server dist"
+    "single:start": "ws -d build --spa index.html --port 8082 -z"
   },
   "devDependencies": {
     "lerna": "^5.1.8"

@@ -1354,7 +1354,7 @@
         name: 'shell',
         filename: 'shellRemoteEntry.js',
         remotes: {
-          item: 'item@http://localhost:8080/itemRemoteEntry.js'
+          item: 'item@http://localhost:8082/itemRemoteEntry.js'
         }
       }
     }

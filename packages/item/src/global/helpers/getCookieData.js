@@ -1,5 +1,5 @@
 const GetValueFromCookie = (name) => {
-  return "478|Mwsz6M6U1bF1fc5cV33AOJUqvcoiXyV8oTZnDUxK"
+  return "1044|SOBUbvnsTf6DTpGtuwQJVhFCSdwSXuCbMJQwrIJf"
   // Split cookie string and get all individual name=value pairs in an array
   let cookieArr = document.cookie.split(";");
 

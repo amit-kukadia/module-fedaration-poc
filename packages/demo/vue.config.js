@@ -1,12 +1,13 @@
-const { defineConfig } = require('@vue/cli-service');
+const { defineConfig } = require('@vue/cli-service')
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const ModuleFederationPlugin = require("webpack").container.ModuleFederationPlugin;
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = defineConfig({
   devServer :{
-    port : 8082
+    port : 8083
   },
+  transpileDependencies: true,
   lintOnSave : false,
   publicPath :"auto" ,
   transpileDependencies: true,
@@ -21,12 +22,12 @@ module.exports = defineConfig({
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: "item",
-        filename: "itemRemoteEntry.js",
-        library: { type: "var", name: "item" },
+        name: "demo",
+        filename: "demoRemoteEntry.js",
+        library: { type: "var", name: "demo" },
         // remoteType: 'var',
         exposes: {
-          "./Item": "./src/components/Item",
+          "./HelloWorld": "./src/components/HelloWorld",
         },
         shared: {
           vue: {         
@@ -45,4 +46,4 @@ module.exports = defineConfig({
       })
     ]
   }
-});
+})

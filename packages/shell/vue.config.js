@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = defineConfig({
   devServer :{
-    port : 8085
+    port : 8081
   },
   lintOnSave : false,
   publicPath : 'auto',
@@ -16,7 +16,7 @@ module.exports = defineConfig({
         .tap(args => {
             args[0].templateParameters = {
               production: isProd,
-              BASE_URL : isProd ? "http://127.0.0.1:8080/" : "http://localhost:8085/"
+              BASE_URL : isProd ? "http://127.0.0.1:8082/" : "http://localhost:8081/"
             };
             return args;
         })
@@ -34,7 +34,8 @@ module.exports = defineConfig({
         // remoteType : 'var',
         remotes: {
           item: "item",
-          reactApp: "reactApp"
+          reactApp: "reactApp",
+          demo: "demo",
         },
         shared: {
           vue: {   
@@ -43,10 +44,10 @@ module.exports = defineConfig({
       }),
       new FileManagerPlugin({
         events: {
-          // onStart:{
-          //   delete: ['../../dist/'],
-          //   mkdir: ['../../dist/'],  
-          // },
+          onStart:{
+            delete: ['../../dist/'],
+            mkdir: ['../../dist/'],  
+          },
           onEnd: {
             copy: [
               { source: './dist', destination: '../../dist' },
