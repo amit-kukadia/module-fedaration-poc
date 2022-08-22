@@ -6,7 +6,7 @@ import router from "./router";
 import "./assets/style.css";
 const i18n = createI18n({
   locale: "nl",
-  allowComposition: true, // you need to specify that!
+  allowComposition: true,
   messages: {
     en: {
       message: {
